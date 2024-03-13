@@ -26,6 +26,7 @@
     "@sanity/ui": "^2.0.10",
     "@sanity/vision": "^3.33.0",
     "@sanity/visual-editing": "^1.7.1",
+    "@uidotdev/usehooks": "^2.4.1",
     "@vercel/stega": "^0.1.0",
     "clsx": "^2.0.0",
     "date-fns": "^2.30.0",
