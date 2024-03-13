@@ -1,12 +1,11 @@
 const title = "TITLE HERE";
 const description = "DESCRIPTION HERE";
-const url = "https://sanitypractice2024.vercel.app";
+const url = "https://sanitypractice2024.vercel.app/";
 
 const config = {
-  metadataBase: new URL(url),
   title,
   description,
-  canonical: "/",
+  canonical: url,
   openGraph: {
     type: "website",
     locale: "en_EN",
@@ -14,9 +13,16 @@ const config = {
     site_name: "sanitypractice2024.vercel.app",
     title,
     description,
+    icons: [
+      {
+        url: "https://sanitypractice2024.vercel.app/favicon.ico",
+        size: "32x32",
+        type: "image/x-icon",
+      },
+    ],
     images: [
       {
-        url: "/opengraph-image.png",
+        url: "https://sanitypractice2024.vercel.app/opengraph-image.png",
         alt: title,
         width: 1200,
         height: 630,

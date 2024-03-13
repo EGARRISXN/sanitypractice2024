@@ -61,34 +61,5 @@
     "prettier-plugin-tailwindcss": "^0.5.11",
     "tailwindcss": "^3.4.0",
     "vercel": "^33.5.5"
-  },
-  "prettier": {
-    "printWidth": 120,
-    "singleQuote": false,
-    "jsxSingleQuote": false,
-    "trailingComma": "all",
-    "bracketSpacing": false,
-    "arrowParens": "always",
-    "semi": true,
-    "useTabs": false,
-    "tabWidth": 2,
-    "plugins": [
-      "prettier-plugin-tailwindcss"
-    ]
-  },
-  "eslintConfig": {
-    "extends": [
-      "@sanity/eslint-config-studio",
-      "next",
-      "next/babel",
-      "next/core-web-vitals",
-      "prettier"
-    ],
-    "rules": {
-      "semi": "error",
-      "comma-dangle": "off",
-      "no-multiple-empty-lines": "error",
-      "no-multi-spaces": "error"
-    }
   }
 }

@@ -2,7 +2,7 @@ import dynamic from "next/dynamic";
 import {loadPostQuery} from "@/lib/sanity/query/load-query";
 import PageLayout from "@/components/pages/post";
 import {generatePostsSlugs} from "@/lib/sanity/query/generate-slugs";
-import {urlForOpenGraphImage} from "@/lib/sanity/utils";
+import {urlForOpenGraphImage} from "@/lib/sanity/image";
 import {draftModeEnabled} from "@/lib/draft-mode";
 
 const PagePreview = dynamic(() => import("@/components/pages/post/preview"));
@@ -18,9 +18,6 @@ export const generateMetadata = async ({params}) => {
   return {
     title: post.meta?.metaTitle ?? post.title,
     description: post.meta?.metaDescription,
-    icons: {
-      icon: "/favicon/favicon.svg",
-    },
     openGraph: {
       title: post.meta?.openGraphTitle,
       description: post.meta?.openGraphDescription,
