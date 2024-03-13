@@ -7,8 +7,7 @@ import {draftModeEnabled} from "@/lib/draft-mode";
 const PagePreview = dynamic(() => import("@/components/pages/posts/preview"));
 
 export const generateMetadata = async () => {
-  const {data} = await loadPageWithPosts({slug: "posts", limit: 20});
-  const {page} = data;
+  const {data: page} = await loadPageWithPosts({slug: "posts", limit: 20});
   const ogImage = page && urlForOpenGraphImage(page.meta?.openGraphImage);
 
   if (!page) {
@@ -26,8 +25,8 @@ export const generateMetadata = async () => {
       images: [
         {
           url: ogImage ?? "",
-          width: 800,
-          height: 600,
+          width: 1200,
+          height: 630,
         },
       ],
     },

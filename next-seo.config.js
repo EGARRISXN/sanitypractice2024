@@ -1,6 +1,6 @@
 const title = "TITLE HERE";
 const description = "DESCRIPTION HERE";
-const url = "https://sanitypractice2024.vercel.app/";
+const url = "https://sanitypractice2024.vercel.app";
 
 const config = {
   title,
@@ -10,7 +10,7 @@ const config = {
     type: "website",
     locale: "en_EN",
     url,
-    site_name: "sanitypractice2024.vercel.app",
+    site_name: "Sanity Practice",
     title,
     description,
     icons: [
@@ -22,7 +22,7 @@ const config = {
     ],
     images: [
       {
-        url: "https://sanitypractice2024.vercel.app/opengraph-image.png",
+        url: "https://sanitypractice2024.vercel.app/og-image.png",
         alt: title,
         width: 1200,
         height: 630,

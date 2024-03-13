@@ -24,8 +24,8 @@ export const generateMetadata = async ({params}) => {
       images: [
         {
           url: ogImage ?? "",
-          width: 800,
-          height: 600,
+          width: 1200,
+          height: 630,
         },
       ],
     },
