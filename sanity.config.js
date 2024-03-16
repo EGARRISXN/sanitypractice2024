@@ -1,30 +1,35 @@
-import "./app/(admin)/studio.css";
-import {defineConfig} from "sanity";
-import {structureTool} from "sanity/structure";
-import {visionTool} from "@sanity/vision";
-import {schema} from "./studio/schemas";
-import {singletonPlugin} from "./studio/plugins/singletonPlugin";
-import {presentationTool} from "sanity/presentation";
-import {locate} from "./studio/plugins/locate";
+'use client'
+import {defineConfig} from 'sanity'
+import {structureTool} from 'sanity/structure'
+import {presentationTool} from 'sanity/presentation'
+import {visionTool} from '@sanity/vision'
+import {pageStructure, singletonPlugin} from '@/sanity/plugins/settings'
+import {locate} from '@/sanity/plugins/locate'
+import {schema} from '@/sanity/schemas'
+import {path, id, dataset, version, title} from '@/sanity/lib/api'
+import home from '@/sanity/schemas/singletons/home'
+import settings from '@/sanity/schemas/singletons/settings'
 
 export default defineConfig({
-  projectId: "o7nkx9dn",
-  dataset: "production",
-  name: "Studio",
-  basePath: "/studio",
+  title: title,
+  projectId: id,
+  dataset: dataset,
+  basePath: path,
   schema: schema,
   plugins: [
-    structureTool(),
+    structureTool({
+      structure: pageStructure([home, settings]),
+    }),
     presentationTool({
       locate,
       previewUrl: {
         draftMode: {
-          enable: "/api/draft",
-          disable: "/api/disable-draft",
+          enable: '/api/draft',
+          disable: '/api/disable-draft',
         },
       },
     }),
-    singletonPlugin({types: ["siteSettings"]}),
-    visionTool({defaultApiVersion: "2024-02-19"}),
+    singletonPlugin([home.name, settings.name]),
+    visionTool({defaultApiVersion: version}),
   ],
-});
+})
