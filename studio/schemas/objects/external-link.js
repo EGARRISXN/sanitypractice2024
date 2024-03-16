@@ -1,7 +1,7 @@
 import {RiExternalLinkLine} from "react-icons/ri";
 import {defineField} from "sanity";
 
-const externalLink = defineField({
+export const externalLink = defineField({
   title: "External Link",
   name: "externalLink",
   type: "object",
@@ -22,5 +22,3 @@ const externalLink = defineField({
     },
   ],
 });
-
-export default externalLink;

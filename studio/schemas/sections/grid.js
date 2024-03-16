@@ -1,7 +1,7 @@
 import {RiLayoutGridLine} from "react-icons/ri";
 import {defineField} from "sanity";
 
-const grid = defineField({
+export const grid = defineField({
   name: "grid",
   type: "object",
   title: "Grid",
@@ -52,5 +52,3 @@ const grid = defineField({
     },
   },
 });
-
-export default grid;

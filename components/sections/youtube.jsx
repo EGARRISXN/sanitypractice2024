@@ -8,10 +8,7 @@ const YoutubeBlock = ({data}) => {
   }
 
   const options = {
-    playerVars: {
-      autoplay: data.autoPlay ? 1 : 0,
-      mute: data.muted ? 1 : 0,
-    },
+    playerVars: {},
   };
 
   const id = getYouTubeId(data.url)?.toString();

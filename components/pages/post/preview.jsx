@@ -1,11 +1,11 @@
 "use client";
+import {useQuery} from "@sanity/react-loader";
+import {pageWithPostsQuery} from "@/lib/sanity/queries";
 import PostPage from "@/components/pages/post";
-import {useQuery} from "@/lib/sanity/query/use-query";
-import {pageWithPostsQuery} from "@/lib/queries";
 
-const PostPagePreview = ({initial}) => {
-  const {data, encodeDataAttribute} = useQuery(pageWithPostsQuery, {}, {initial});
+export default function PostPagePreview(props) {
+  const {initial, params} = props;
+  const {data, encodeDataAttribute} = useQuery(pageWithPostsQuery, params, {initial});
 
   return <PostPage data={data} encodeDataAttribute={encodeDataAttribute} />;
-};
-export default PostPagePreview;
+}

@@ -1,7 +1,7 @@
 import {RiLayoutColumnLine} from "react-icons/ri";
 import {defineField} from "sanity";
 
-const columns = defineField({
+export const columns = defineField({
   name: "columns",
   title: "Columns",
   type: "object",
@@ -89,5 +89,3 @@ const columns = defineField({
     },
   ],
 });
-
-export default columns;

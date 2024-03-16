@@ -1,7 +1,7 @@
 import {RiShareLine} from "react-icons/ri";
 import {defineField} from "sanity";
 
-const meta = defineField({
+export const metaFields = defineField({
   title: "Meta Information",
   name: "metaFields",
   type: "object",
@@ -27,7 +27,7 @@ const meta = defineField({
       name: "openGraphImage",
       title: "Open Graph Image",
       type: "image",
-      description: "Ideal size for open graph images is 1200 x 600",
+      description: "Ideal size for open graph images is 1200 x 630",
       options: {
         hotspot: true,
       },
@@ -47,5 +47,3 @@ const meta = defineField({
     },
   ],
 });
-
-export default meta;

@@ -1,7 +1,7 @@
 import {RiLinksLine} from "react-icons/ri";
 import {defineField} from "sanity";
 
-const internalLink = defineField({
+export const internalLink = defineField({
   title: "Internal Link",
   name: "internalLink",
   type: "object",
@@ -26,5 +26,3 @@ const internalLink = defineField({
     },
   ],
 });
-
-export default internalLink;

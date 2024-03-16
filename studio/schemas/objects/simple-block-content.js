@@ -1,7 +1,7 @@
 import {RiFileTextLine} from "react-icons/ri";
 import {defineField} from "sanity";
 
-const simpleBlockContent = defineField({
+export const simpleBlockContent = defineField({
   title: "Simple Block Content",
   name: "simpleBlockContent",
   description: "Simple text block",
@@ -30,5 +30,3 @@ const simpleBlockContent = defineField({
     },
   ],
 });
-
-export default simpleBlockContent;

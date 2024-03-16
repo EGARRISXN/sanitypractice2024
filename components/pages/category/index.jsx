@@ -1,6 +1,6 @@
 import {RenderSection} from "@/components/sections";
 
-const CategoryPage = ({data}) => {
+export default function CategoryPage({data}) {
   return (
     <>
       {data?.content?.map((section) => {
@@ -12,6 +12,4 @@ const CategoryPage = ({data}) => {
       })}
     </>
   );
-};
-
-export default CategoryPage;
+}

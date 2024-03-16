@@ -2,7 +2,7 @@ import {Heading} from "@/components/ui";
 import {PostList} from "@/components/shared";
 import {RenderSection} from "@/components/sections";
 
-const HomePage = ({data}) => {
+export default function HomePage({data}) {
   const {page, posts} = data ?? {};
 
   return (
@@ -20,6 +20,4 @@ const HomePage = ({data}) => {
       {posts && <PostList posts={posts} />}
     </>
   );
-};
-
-export default HomePage;
+}

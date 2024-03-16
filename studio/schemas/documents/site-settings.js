@@ -1,7 +1,7 @@
 import {RiSettings5Line} from "react-icons/ri";
 import {defineType, defineField} from "sanity";
 
-const siteSettings = defineType({
+export const siteSettings = defineType({
   name: "siteSettings",
   type: "document",
   title: "Site Settings",
@@ -76,5 +76,3 @@ const siteSettings = defineType({
     },
   },
 });
-
-export default siteSettings;

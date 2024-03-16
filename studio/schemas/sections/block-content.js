@@ -1,7 +1,7 @@
 import {RiFileTextLine} from "react-icons/ri";
 import {defineField} from "sanity";
 
-const blockContent = defineField({
+export const blockContent = defineField({
   title: "Block Content",
   name: "blockContent",
   description: "Text Block",
@@ -58,10 +58,7 @@ const blockContent = defineField({
           marks: {
             decorators: [
               {value: "strong", title: "Strong"},
-              {
-                value: "em",
-                title: "Italic",
-              },
+              {value: "em", title: "Italic"},
               {value: "underline", title: "Underline"},
               {value: "code", title: "Code"},
             ],
@@ -80,5 +77,3 @@ const blockContent = defineField({
     },
   },
 });
-
-export default blockContent;

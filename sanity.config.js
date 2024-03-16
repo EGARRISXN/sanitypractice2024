@@ -1,10 +1,10 @@
+import "./app/(admin)/studio.css";
 import {defineConfig} from "sanity";
 import {structureTool} from "sanity/structure";
 import {visionTool} from "@sanity/vision";
-import {schemasTypes} from "./studio";
+import {schema} from "./studio/schemas";
 import {singletonPlugin} from "./studio/plugins/singletonPlugin";
 import {presentationTool} from "sanity/presentation";
-import {structure} from "./studio/structure";
 import {locate} from "./studio/plugins/locate";
 
 export default defineConfig({
@@ -12,21 +12,19 @@ export default defineConfig({
   dataset: "production",
   name: "Studio",
   basePath: "/studio",
-  schema: {
-    types: schemasTypes,
-  },
+  schema: schema,
   plugins: [
-    structureTool({structure}),
+    structureTool(),
     presentationTool({
       locate,
       previewUrl: {
         draftMode: {
           enable: "/api/draft",
+          disable: "/api/disable-draft",
         },
       },
     }),
     singletonPlugin({types: ["siteSettings"]}),
-    structureTool(),
     visionTool({defaultApiVersion: "2024-02-19"}),
   ],
 });

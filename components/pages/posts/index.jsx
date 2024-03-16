@@ -1,7 +1,7 @@
 import {PostList} from "@/components/shared";
 import {RenderSection} from "@/components/sections";
 
-const PostsPage = ({data}) => {
+export default function PostsPage({data}) {
   const {page, posts} = data ?? {};
 
   return (
@@ -17,6 +17,4 @@ const PostsPage = ({data}) => {
       {posts && <PostList posts={posts} />}
     </>
   );
-};
-
-export default PostsPage;
+}

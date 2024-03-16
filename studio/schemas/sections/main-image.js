@@ -1,7 +1,7 @@
 import {RiImageLine} from "react-icons/ri";
 import {defineField} from "sanity";
 
-const mainImage = defineField({
+export const mainImage = defineField({
   name: "mainImage",
   title: "Image",
   description: "Image",
@@ -32,5 +32,3 @@ const mainImage = defineField({
     },
   },
 });
-
-export default mainImage;

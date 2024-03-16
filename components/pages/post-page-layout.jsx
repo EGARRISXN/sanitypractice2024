@@ -1,7 +1,7 @@
 import {Date, Heading, Tag} from "@/components/ui";
 import {RenderSection} from "@/components/sections";
 
-const PostPage = ({post, preview = false}) => {
+export default function PostPage({post, preview = false}) {
   const keywords = post.keywords?.map((tag) => <Tag key={tag}>{tag}</Tag>);
 
   if (preview && !post) {
@@ -26,6 +26,4 @@ const PostPage = ({post, preview = false}) => {
       })}
     </article>
   );
-};
-
-export default PostPage;
+}

@@ -2,7 +2,7 @@ import slug from "slugify";
 import {RiPagesLine} from "react-icons/ri";
 import {defineType, defineField} from "sanity";
 
-const page = defineType({
+export const page = defineType({
   name: "page",
   type: "document",
   title: "Pages",
@@ -70,5 +70,3 @@ const page = defineType({
     },
   },
 });
-
-export default page;

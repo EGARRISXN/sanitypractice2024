@@ -1,6 +1,6 @@
 import {defineField} from "sanity";
 
-const link = defineField({
+export const link = defineField({
   title: "URL",
   name: "link",
   type: "object",
@@ -18,5 +18,3 @@ const link = defineField({
     },
   ],
 });
-
-export default link;

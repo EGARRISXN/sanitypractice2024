@@ -1,11 +1,11 @@
 "use client";
-import HomePage from "@/components/pages/home";
-import {useQuery} from "@/lib/sanity/query/use-query";
-import {pageWithPostsQuery} from "@/lib/queries";
+import {useQuery} from "@sanity/react-loader";
+import {pageWithPostsQuery} from "@/lib/sanity/queries";
+import PostsPage from "@/components/pages/posts";
 
-const HomepagePreview = ({initial, params}) => {
+export default function PostsPagePreview(props) {
+  const {initial, params} = props;
   const {data, encodeDataAttribute} = useQuery(pageWithPostsQuery, params, {initial});
 
-  return <HomePage data={data} encodeDataAttribute={encodeDataAttribute} />;
-};
-export default HomepagePreview;
+  return <PostsPage data={data} encodeDataAttribute={encodeDataAttribute} />;
+}

@@ -1,7 +1,7 @@
 import {RiShareLine} from "react-icons/ri";
 import {defineField} from "sanity";
 
-const socialFields = defineField({
+export const socialFields = defineField({
   title: "Social",
   name: "socialFields",
   type: "object",
@@ -24,5 +24,3 @@ const socialFields = defineField({
     },
   ],
 });
-
-export default socialFields;

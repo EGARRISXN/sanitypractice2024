@@ -3,7 +3,7 @@ import {format} from "date-fns";
 import {RiArticleLine} from "react-icons/ri";
 import {defineType, defineField} from "sanity";
 
-const post = defineType({
+export const post = defineType({
   name: "post",
   type: "document",
   title: "Post",
@@ -123,5 +123,3 @@ const post = defineType({
     },
   },
 });
-
-export default post;

@@ -1,7 +1,7 @@
 import {RiUserSmileLine} from "react-icons/ri";
 import {defineType, defineField} from "sanity";
 
-const person = defineType({
+export const person = defineType({
   name: "person",
   type: "document",
   title: "Persons",
@@ -48,5 +48,3 @@ const person = defineType({
     },
   },
 });
-
-export default person;

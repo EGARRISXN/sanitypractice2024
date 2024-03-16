@@ -1,7 +1,7 @@
 import {Date, Heading, Tag} from "@/components/ui";
 import {RenderSection} from "@/components/sections";
 
-const PostPage = ({data}) => {
+export default function PostPage({data}) {
   if (!data) {
     return;
   }
@@ -26,6 +26,4 @@ const PostPage = ({data}) => {
       })}
     </article>
   );
-};
-
-export default PostPage;
+}

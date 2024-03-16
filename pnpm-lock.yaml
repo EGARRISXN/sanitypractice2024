@@ -17,9 +17,6 @@ dependencies:
   '@sanity/image-url':
     specifier: ^1.0.2
     version: 1.0.2
-  '@sanity/overlays':
-    specifier: ^2.3.19
-    version: 2.3.25(@sanity/client@6.15.4)(next@14.1.3)
   '@sanity/preview-url-secret':
     specifier: ^1.6.4
     version: 1.6.4(@sanity/client@6.15.4)
@@ -53,6 +50,9 @@ dependencies:
   framer-motion:
     specifier: ^11.0.12
     version: 11.0.12(react-dom@18.2.0)(react@18.2.0)
+  geist:
+    specifier: ^1.2.2
+    version: 1.2.2(next@14.1.3)
   get-youtube-id:
     specifier: ^1.0.1
     version: 1.0.1
@@ -92,6 +92,9 @@ dependencies:
   styled-components:
     specifier: ^6.1.8
     version: 6.1.8(react-dom@18.2.0)(react@18.2.0)
+  suspend-react:
+    specifier: ^0.1.3
+    version: 0.1.3(react@18.2.0)
 
 devDependencies:
   '@sanity/cli':
@@ -2579,20 +2582,6 @@ packages:
       lodash: 4.17.21
     transitivePeerDependencies:
       - supports-color
-    dev: false
-
-  /@sanity/overlays@2.3.25(@sanity/client@6.15.4)(next@14.1.3):
-    resolution: {integrity: sha512-ynZ2uWPFQ6lQae1kK3q91IOitLus/Ht7s1yEBkaFGCXd4cjhxLBResW4swzAtvC4O0Z6Rwj5NuMnvwER1M/aYw==}
-    engines: {node: '>=16.14'}
-    deprecated: migrate to @sanity/visual-editing
-    dependencies:
-      '@sanity/visual-editing': 1.7.1(@sanity/client@6.15.4)(next@14.1.3)
-    transitivePeerDependencies:
-      - '@remix-run/react'
-      - '@sanity/client'
-      - '@sveltejs/kit'
-      - next
-      - svelte
     dev: false
 
   /@sanity/portable-text-editor@3.33.0(react-dom@18.2.0)(react@18.2.0)(rxjs@7.8.1)(styled-components@6.1.8):
@@ -5753,6 +5742,14 @@ packages:
       strip-ansi: 6.0.1
       wide-align: 1.1.5
     dev: true
+
+  /geist@1.2.2(next@14.1.3):
+    resolution: {integrity: sha512-uRDrxhvdnPwWJmh+K5+/5LXSKwvJzaYCl9tDXgiBi4hj7hB4K7+n/WLcvJMFs5btvyn0r9OSwCd1s6CmqAsxEw==}
+    peerDependencies:
+      next: '>=13.2.0 <15'
+    dependencies:
+      next: 14.1.3(@babel/core@7.24.0)(react-dom@18.2.0)(react@18.2.0)
+    dev: false
 
   /generic-pool@3.4.2:
     resolution: {integrity: sha512-H7cUpwCQSiJmAHM4c/aFu6fUfrhWXW1ncyh8ftxEPMu6AiYkHw9K8br720TGPZJbk5eOH2bynjZD1yPvdDAmag==}
